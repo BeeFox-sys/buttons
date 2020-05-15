@@ -74,13 +74,20 @@ html, body {
 .button:hover{
     box-shadow: 3px 3px inset rgba(0, 0, 0, 0.185);
 }
-.button:active{
-    box-shadow: 5px 5px inset rgba(0, 0, 0, 0.185);
-}
+/* .button:active{
+    box-shadow: 4px 4px inset rgba(0, 0, 0, 0.185);
+} */
 
 .clicked{
-    filter: brightness(80%)
+    filter: brightness(80%);
+    box-shadow: 4px 4px inset rgba(0, 0, 0, 0.185);
 }
+.clicked:hover{
+    box-shadow: 5px 5px inset rgba(0, 0, 0, 0.185);
+}
+/* .clicked:active{
+    box-shadow: 7px 7px inset rgba(0, 0, 0, 0.185);
+} */
 
 #loadMore{
     width: 165px;

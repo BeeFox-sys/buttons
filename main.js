@@ -18,7 +18,7 @@ function randomizeButtons(){
         button.className = 'button'
         button.onclick = (self)=>{self.target.classList.toggle('clicked'); countFunc()}
         container.appendChild(button)
-        sheet.insertRule(`.button:nth-child(${i}){width: 100%; height: 100%; border: none; box-shadow: 2px 2px inset rgba(0, 0, 0, 0.185); ${randomButton()} }`, 0)
+        sheet.insertRule(`.button:nth-child(${i}){ ${randomButton()} }`, 0)
     }
 
     var loadMoreButton = document.getElementById("loadMore")

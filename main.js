@@ -8,7 +8,7 @@ buttons = 0
 function randomizeButtons(){
     var sheet = document.styleSheets[0]
     var container = document.getElementById("container")
-    let newButtons = randomIntFromInterval(50,300)
+    let newButtons = randomIntFromInterval(100,300)
     buttons += newButtons
 
     for(var i = buttons-newButtons+1; i <= buttons; i++){

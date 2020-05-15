@@ -4,6 +4,7 @@ var maxSat = 100
 var minSat = 90
 
 buttons = 0
+count = 0
 
 function randomizeButtons(){
     var sheet = document.styleSheets[0]
@@ -15,7 +16,7 @@ function randomizeButtons(){
         let button = document.createElement("input")
         button.type = 'button'
         button.className = 'button'
-        button.onclick = (self)=>self.target.classList.toggle('clicked')
+        button.onclick = (self)=>{self.target.classList.toggle('clicked'); countFunc()}
         container.appendChild(button)
         sheet.insertRule(`.button:nth-child(${i}){width: 100%; height: 100%; border: none; box-shadow: 2px 2px inset rgba(0, 0, 0, 0.185); ${randomButton()} }`, 0)
     }
@@ -24,11 +25,11 @@ function randomizeButtons(){
     loadMoreButton.style.backgroundColor = loadColour()
 }
 
-// function clicked(self){
-//     self.classList.toggle('clicked')
-// }
-
-// randomizeButtons()
+function countFunc(){
+    count ++
+    countLabel = document.getElementById("count")
+    countLabel.innerText = count
+}
 
 function randomButton(){
     let width = randomSize()
